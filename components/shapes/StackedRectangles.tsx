@@ -1,10 +1,5 @@
 const StackedRectangles = ({ color }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="240"
-    height="174"
-    viewBox="0 0 240 174"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 174">
     <rect
       id="Rectangle_4"
       data-name="Rectangle 4"

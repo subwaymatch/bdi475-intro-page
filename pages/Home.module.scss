@@ -1,5 +1,13 @@
 @import 'styles/variables';
 
+.pageWrapper {
+  h2 {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e1e5e7;
+    margin-bottom: 1.5rem;
+  }
+}
+
 section.overview {
   background: $color-light-yellow;
   padding: 3.5rem 0 6rem 0;
@@ -20,13 +28,15 @@ section.overview {
     color: $color-primary-dark;
     font-size: 4.5rem;
     line-height: 1.2;
-    letter-spacing: -0.2rem;
+    letter-spacing: -0.15rem;
     font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
   }
 
   .lineSpacer {
+    border-top: 1px solid $color-primary;
     height: 1px;
-    background-color: $color-primary;
     margin-top: 1.3rem;
   }
 
@@ -34,6 +44,30 @@ section.overview {
     color: $color-primary;
     font-size: 1.52rem;
     margin: 0;
+  }
+
+  .skills {
+    text-align: center;
+    margin-top: 4rem;
+
+    h3 {
+      color: $color-primary-dark;
+      font-size: 2.4rem;
+      font-weight: 500;
+    }
+
+    .skillDesc {
+      color: $color-tertiary;
+      display: block;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+    }
+
+    svg {
+      max-height: 150px;
+      margin-top: 3rem;
+    }
   }
 }
 
@@ -44,7 +78,6 @@ section.courseTopics {
   font-size: 2rem;
 
   h2 {
-    font-size: 2.5rem;
     border-bottom: 1px solid $color-primary-dark;
     color: $color-primary-dark;
   }
@@ -55,4 +88,15 @@ section.courseTopics {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 0;
+}
+
+.footer {
+  color: $color-primary-dark;
+  background: $color-primary;
+  padding: 4rem 0;
+  font-size: 1.7rem;
+
+  a {
+    color: $color-light-yellow;
+  }
 }
