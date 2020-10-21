@@ -1,0 +1,23 @@
+@use 'sass:color';
+@import './variables';
+@import url('https://rsms.me/inter/inter.css');
+html {
+  font-family: $font-sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: $font-sans-serif;
+  }
+}
+
+body {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  letter-spacing: -0.03rem;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  cursor: pointer;
+}
