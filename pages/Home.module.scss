@@ -1,0 +1,58 @@
+@import 'styles/variables';
+
+section.overview {
+  background: $color-light-yellow;
+  padding: 3.5rem 0 6rem 0;
+
+  .courseMetaData {
+    .label {
+      display: block;
+      color: $color-primary;
+    }
+
+    .value {
+      display: block;
+      color: $color-tertiary;
+    }
+  }
+
+  h1 {
+    color: $color-primary-dark;
+    font-size: 4.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.2rem;
+    font-weight: 700;
+  }
+
+  .lineSpacer {
+    height: 1px;
+    background-color: $color-primary;
+    margin-top: 1.3rem;
+  }
+
+  p.courseDesc {
+    color: $color-primary;
+    font-size: 1.52rem;
+    margin: 0;
+  }
+}
+
+section.courseTopics {
+  padding: 4rem 0;
+  background-color: $color-primary;
+  color: $color-light-yellow;
+  font-size: 2rem;
+
+  h2 {
+    font-size: 2.5rem;
+    border-bottom: 1px solid $color-primary-dark;
+    color: $color-primary-dark;
+  }
+}
+
+.courseTopicItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
