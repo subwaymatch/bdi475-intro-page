@@ -21,8 +21,13 @@ export default function Home() {
   return (
     <div className={styles.pageWrapper}>
       <div className={styles.sideFloatingBar}>
-        <span>University of Illinois at Urbana-Champaign</span>{' '}
-        <span>Business Data & Innovation</span>{' '}
+        <span className={styles.univName}>
+          University of Illinois at Urbana-Champaign
+        </span>{' '}
+        <div className={styles.illinoisLogoWrapper}>
+          <IllinoisBlockILogo color="#ffc9b9" />
+        </div>
+        <span className={styles.courses}>Business Data &amp; Innovation</span>{' '}
         <DonutCircleMedium color="#ffc9b9" />
       </div>
 
