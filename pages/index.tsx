@@ -22,6 +22,12 @@ const CourseTopicItem = ({ text }) => {
 export default function Home() {
   return (
     <div className={styles.pageWrapper}>
+      <Head>
+        <title>
+          BDI475 Introduction to Data Analytics Applications in Business
+        </title>
+      </Head>
+
       <div className={styles.sideFloatingBar}>
         <span className={styles.univName}>
           University of Illinois at Urbana-Champaign
