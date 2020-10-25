@@ -7,6 +7,8 @@ import HalfCircleTilted from 'components/shapes/HalfCircleTilted';
 import IllinoisBlockILogo from 'components/shapes/IllinoisBlockILogo';
 import DonutCircleSmall from 'components/shapes/DonutCircleSmall';
 import DonutCircleMedium from 'components/shapes/DonutCircleMedium';
+import Rectangle01 from 'components/shapes/Rectangle01';
+import FullCircle from 'components/shapes/FullCircle';
 
 const CourseTopicItem = ({ text }) => {
   return (
@@ -28,7 +30,19 @@ export default function Home() {
           <IllinoisBlockILogo color="#ffc9b9" />
         </div>
         <span className={styles.courses}>Business Data &amp; Innovation</span>{' '}
-        <DonutCircleMedium color="#ffc9b9" />
+        <div className={styles.circleWrapper}>
+          <DonutCircleMedium color="#ffc9b9" />
+        </div>
+      </div>
+
+      <div className={styles.sideFloatingShapes}>
+        <span className={styles.rectWrapper}>
+          <Rectangle01 color="#ffc9b9" />
+        </span>
+
+        <span className={styles.circleWrapper}>
+          <FullCircle color="#4c956c" />
+        </span>
       </div>
 
       <section className={styles.overview}>

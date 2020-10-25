@@ -13,7 +13,7 @@
 .sideFloatingBar {
   position: absolute;
   color: $color-primary;
-  top: 73rem;
+  top: 72.5rem;
   left: 0.5rem;
   transform: rotate(270deg);
   transform-origin: top left;
@@ -27,6 +27,11 @@
     transform: rotate(90deg);
   }
 
+  .circleWrapper {
+    width: 8rem;
+    line-height: 0;
+  }
+
   span.univName {
     margin-left: 2rem;
     margin-right: 2rem;
@@ -34,7 +39,25 @@
 
   span.courses {
     margin-left: 3rem;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
+  }
+}
+
+.sideFloatingShapes {
+  position: absolute;
+  right: -4rem;
+  top: 27rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .rectWrapper {
+    transform: rotate(15deg);
+  }
+
+  .circleWrapper {
+    position: relative;
+    top: -3rem;
   }
 }
 

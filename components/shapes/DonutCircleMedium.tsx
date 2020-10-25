@@ -1,10 +1,5 @@
 const DonutCircleMedium = ({ color }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="120"
-    height="120"
-    viewBox="0 0 120 120"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
     <g id="Path_1" data-name="Path 1" fill="none">
       <path d="M60,0A60,60,0,1,1,0,60,60,60,0,0,1,60,0Z" stroke="none" />
       <path
