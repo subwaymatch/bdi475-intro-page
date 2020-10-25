@@ -1,4 +1,4 @@
-const DonutCircle = ({ color }) => (
+const DonutCircleSmall = ({ color }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88">
     <g id="Path_8" data-name="Path 8" fill="none">
       <path d="M44,0A44,44,0,1,1,0,44,44,44,0,0,1,44,0Z" stroke="none" />
@@ -11,4 +11,4 @@ const DonutCircle = ({ color }) => (
   </svg>
 );
 
-export default DonutCircle;
+export default DonutCircleSmall;
