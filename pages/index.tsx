@@ -54,17 +54,17 @@ export default function Home() {
       <section className={styles.overview}>
         <Container>
           <Row className={styles.courseMetaData}>
-            <Col md={4}>
+            <Col xs={4}>
               <span className={styles.label}>Credit</span>
               <span className={styles.value}>3 Hours</span>
             </Col>
 
-            <Col md={4}>
+            <Col xs={4}>
               <span className={styles.label}>Term </span>
               <span className={styles.value}>Spring 2020</span>
             </Col>
 
-            <Col md={4}>
+            <Col xs={4}>
               <span className={styles.label}>Instructor</span>
               <span className={styles.value}>Ye Joo Park</span>
             </Col>
