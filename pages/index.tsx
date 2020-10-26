@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { Container, Row, Col } from 'react-bootstrap';
+import { motion, useCycle } from 'framer-motion';
 import styles from './Home.module.scss';
 import Triangle from 'components/shapes/Triangle';
 import StackedRectangles from 'components/shapes/StackedRectangles';
@@ -9,6 +10,77 @@ import DonutCircleSmall from 'components/shapes/DonutCircleSmall';
 import DonutCircleMedium from 'components/shapes/DonutCircleMedium';
 import Rectangle01 from 'components/shapes/Rectangle01';
 import FullCircle from 'components/shapes/FullCircle';
+
+const loaderVariants = {
+  animationTopCircle: {
+    scale: [0.9, 1],
+    transition: {
+      scale: {
+        yoyo: Infinity,
+        duration: 0.5,
+      },
+    },
+  },
+  animationRightRect: {
+    x: [-20, 20],
+    y: [0, -20],
+    rotate: [-30, 30],
+    transition: {
+      rotate: {
+        yoyo: Infinity,
+        duration: 4,
+      },
+      x: {
+        yoyo: Infinity,
+        duration: 2,
+      },
+      y: {
+        yoyo: Infinity,
+        duration: 1,
+        ease: 'easeOut',
+      },
+    },
+  },
+  animationRightCircle: {
+    y: [10, -10],
+    x: 0,
+    transition: {
+      y: {
+        yoyo: Infinity,
+        duration: 1,
+        ease: 'easeOut',
+      },
+    },
+  },
+  tilt: {
+    rotate: [-2, 2, -2],
+    scale: [0.98, 1],
+    transition: {
+      rotate: {
+        yoyo: Infinity,
+        duration: 3,
+      },
+      scale: {
+        yoyo: Infinity,
+        duration: 1,
+      },
+    },
+  },
+  tilt2: {
+    rotate: [-4, 2, -4],
+    scale: [0.92, 1],
+    transition: {
+      rotate: {
+        yoyo: Infinity,
+        duration: 2,
+      },
+      scale: {
+        yoyo: Infinity,
+        duration: 1,
+      },
+    },
+  },
+};
 
 const CourseTopicItem = ({ text }) => {
   return (
@@ -58,19 +130,31 @@ export default function Home() {
           <IllinoisBlockILogo color="#ffc9b9" />
         </div>
         <span className={styles.courses}>Business Data &amp; Innovation</span>{' '}
-        <div className={styles.circleWrapper}>
+        <motion.div
+          variants={loaderVariants}
+          animate="animationTopCircle"
+          className={styles.circleWrapper}
+        >
           <DonutCircleMedium color="#ffc9b9" />
-        </div>
+        </motion.div>
       </div>
 
       <div className={styles.sideFloatingShapes}>
-        <span className={styles.rectWrapper}>
+        <motion.span
+          variants={loaderVariants}
+          animate="animationRightRect"
+          className={styles.rectWrapper}
+        >
           <Rectangle01 color="#ffc9b9" />
-        </span>
+        </motion.span>
 
-        <span className={styles.circleWrapper}>
+        <motion.span
+          variants={loaderVariants}
+          animate="animationRightCircle"
+          className={styles.circleWrapper}
+        >
           <FullCircle color="#4c956c" />
-        </span>
+        </motion.span>
       </div>
 
       <section className={styles.overview}>
@@ -117,19 +201,25 @@ export default function Home() {
             <Col md={4}>
               <h3>Python</h3>
               <span className={styles.skillDesc}>Programming Language</span>
-              <Triangle color="#4C956C" />
+              <motion.div variants={loaderVariants} animate="tilt">
+                <Triangle color="#4C956C" />
+              </motion.div>
             </Col>
 
             <Col md={4}>
               <h3>Tableau</h3>
               <span className={styles.skillDesc}>Visualization Software</span>
-              <StackedRectangles color="#d68c45" />
+              <motion.div variants={loaderVariants} animate="tilt">
+                <StackedRectangles color="#d68c45" />
+              </motion.div>
             </Col>
 
             <Col md={4}>
               <h3>Analytical Skills</h3>
               <span className={styles.skillDesc}>Logical Thinking</span>
-              <HalfCircleTilted color="#ffc9b9" />
+              <motion.div variants={loaderVariants} animate="tilt">
+                <HalfCircleTilted color="#ffc9b9" />
+              </motion.div>
             </Col>
           </Row>
         </Container>
@@ -165,7 +255,9 @@ export default function Home() {
               <div className={styles.item}>
                 <Row className="align-items-center">
                   <Col xs={2}>
-                    <HalfCircleTilted color="#D68C45" />
+                    <motion.div variants={loaderVariants} animate="tilt2">
+                      <HalfCircleTilted color="#D68C45" />
+                    </motion.div>
                   </Col>
 
                   <Col xs={10}>
@@ -180,7 +272,9 @@ export default function Home() {
               <div className={styles.item}>
                 <Row className="align-items-center">
                   <Col xs={2}>
-                    <DonutCircleSmall color="#4C956C" />
+                    <motion.div variants={loaderVariants} animate="tilt2">
+                      <DonutCircleSmall color="#4C956C" />
+                    </motion.div>
                   </Col>
 
                   <Col xs={10}>
@@ -195,7 +289,9 @@ export default function Home() {
           <div className={styles.item}>
             <Row className="align-items-center">
               <Col xs={2} md={1}>
-                <Triangle color="#ffc9b9" />
+                <motion.div variants={loaderVariants} animate="tilt2">
+                  <Triangle color="#ffc9b9" />
+                </motion.div>
               </Col>
               <Col xs={10} md={11}>
                 <h3>No Other Course Required</h3>
