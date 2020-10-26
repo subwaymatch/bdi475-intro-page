@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Container, Row, Col } from 'react-bootstrap';
-import { motion, useCycle } from 'framer-motion';
+import { motion } from 'framer-motion';
 import styles from './Home.module.scss';
 import Triangle from 'components/shapes/Triangle';
 import StackedRectangles from 'components/shapes/StackedRectangles';
