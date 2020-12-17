@@ -167,7 +167,7 @@ export default function Home() {
 
             <Col xs={4}>
               <span className={styles.label}>Term </span>
-              <span className={styles.value}>Spring 2020</span>
+              <span className={styles.value}>Spring 2021</span>
             </Col>
 
             <Col xs={4}>
